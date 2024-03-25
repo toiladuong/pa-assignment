@@ -18,9 +18,7 @@ export const MockChart = ({ data }: LineChartProps) => {
   const boundsWidth = dimensions.width - MARGIN.right - MARGIN.left;
   const boundsHeight = dimensions.height - MARGIN.top - MARGIN.bottom;
 
-  // Y axis
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [min, max] = d3.extent(data, (d) => d.y);
+  const [, max] = d3.extent(data, (d) => d.y);
   const yScale = useMemo(() => {
     return d3
       .scaleLinear()
@@ -28,9 +26,7 @@ export const MockChart = ({ data }: LineChartProps) => {
       .range([boundsHeight, 0]);
   }, [boundsHeight, max]);
 
-  // X axis
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [xMin, xMax] = d3.extent(data, (d) => d.x);
+  const [, xMax] = d3.extent(data, (d) => d.x);
   const xScale = useMemo(() => {
     return d3
       .scaleLinear()
