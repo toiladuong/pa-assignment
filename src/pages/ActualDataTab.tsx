@@ -273,7 +273,7 @@ function ActualDataTab() {
                           <ProjectTitle>
                             React project: Super Tiktok
                           </ProjectTitle>
-                          <ProgressBar percent={100} color='blue' />
+                          <ProgressBar percent={100} color='#65aaff' />
                         </Box>
                       </div>
                     </li>
@@ -298,7 +298,7 @@ function ActualDataTab() {
                         <Box flexGrow={1} className='d-flex flex-col h-full'>
                           <ProjectTitle>Vue project: PEKO</ProjectTitle>
 
-                          <ProgressBar percent={68} color='green' />
+                          <ProgressBar percent={68} color='#63ea63' />
                         </Box>
                       </div>
                     </li>
@@ -322,7 +322,7 @@ function ActualDataTab() {
                         </Box>
                         <Box flexGrow={1} className='d-flex flex-col h-full'>
                           <ProjectTitle>Next project: ???</ProjectTitle>
-                          <ProgressBar percent={10} color='red' />
+                          <ProgressBar percent={10} color='#ff5959' />
                         </Box>
                       </div>
                     </li>

@@ -27,7 +27,7 @@ export default function NestedTable() {
             variant='contained'
             sx={{
               backgroundColor: 'white',
-              color: 'blue',
+              color: '#8181fd',
             }}
             onClick={onDownload}
           >
