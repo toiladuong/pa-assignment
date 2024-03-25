@@ -11,7 +11,6 @@ type LineChartProps = {
 };
 
 export const MockChart = ({ data }: LineChartProps) => {
-  // bounds = area inside the graph axis = calculated by substracting the margins
   const axesRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -20,6 +19,7 @@ export const MockChart = ({ data }: LineChartProps) => {
   const boundsHeight = dimensions.height - MARGIN.top - MARGIN.bottom;
 
   // Y axis
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [min, max] = d3.extent(data, (d) => d.y);
   const yScale = useMemo(() => {
     return d3
@@ -29,6 +29,7 @@ export const MockChart = ({ data }: LineChartProps) => {
   }, [boundsHeight, max]);
 
   // X axis
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [xMin, xMax] = d3.extent(data, (d) => d.x);
   const xScale = useMemo(() => {
     return d3
@@ -37,7 +38,6 @@ export const MockChart = ({ data }: LineChartProps) => {
       .range([0, boundsWidth]);
   }, [boundsWidth, xMax]);
 
-  // Render the X and Y axis using d3.js, not react
   useEffect(() => {
     const svgElement = d3.select(axesRef.current);
     svgElement.selectAll('*').remove();

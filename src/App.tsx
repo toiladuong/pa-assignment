@@ -14,8 +14,7 @@ function App() {
             if (route.layout === null) {
               Layout = Fragment;
             } else {
-              Layout =
-                route.layout === undefined ? DefaultLayout : route.layout;
+              Layout = DefaultLayout;
             }
 
             const Page = route.component;
